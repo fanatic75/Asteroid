@@ -1,19 +1,13 @@
 import React from 'react';
 import Header from './Header';
-const Layout = (props:{children:React.ReactNode})=>{
+const Layout = (props:{searchID?:string,setSearchID?:React.Dispatch<React.SetStateAction<string>>,children:React.ReactNode})=>{
     return <>
-        { <Header  />}
-        <div
-          style={{
-            margin: `1.25rem auto`,
-            padding: `0px 1.9875rem `,
-            paddingTop: 0,
-          }}
-        >
+        { <Header searchID={props.searchID} setSearchID={props.setSearchID} />}
+       
             <main>
                 {props.children}
             </main>
-        </div>
+        
     </>
 }
 export default Layout;

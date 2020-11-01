@@ -14,9 +14,7 @@ firebase.initializeApp({
   appId: "1:690233365565:web:3a5b3ccec4d1c24c9b0654"
 });
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
 );
 
