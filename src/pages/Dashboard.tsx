@@ -45,7 +45,7 @@ export default function Dashboard() {
     if (!isLoggedIn()) history.push("/");
   }, [history]);
 
-  const [asteroids, setAsteroids] = React.useState();
+  const [asteroids, setAsteroids] = React.useState<{[date:string]:AsteroidI[]}>();
   useEffect(() => {
     async function fetchAsteroid() {
       if (startDate && endDate && new Date(endDate) < new Date(startDate)) {
@@ -116,7 +116,7 @@ export default function Dashboard() {
                   specificAsteroid.result.length === 0 &&
                   closestDates.length > 0 &&
                   closestDates.map((date) =>
-                    ((asteroids?.[date] as unknown) as Array<AsteroidI>).map(
+                    asteroids[date].map(
                       (asteroid: AsteroidI) => {
                         if (numberOfAsteroidRendered >= 10) return null;
                         numberOfAsteroidRendered++;
