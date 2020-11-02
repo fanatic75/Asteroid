@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## To Run 
+cd into project folder\
+yarn install\
+add an environment file(.env) into root directory with key = `REACT_APP_API_KEY` and pass the value of API KEY to this variable\
+yarn start
+
 ## Available Scripts
 
 In the project directory, you can run:
