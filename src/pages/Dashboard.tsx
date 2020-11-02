@@ -119,7 +119,6 @@ export default function Dashboard() {
                     ((asteroids?.[date] as unknown) as Array<AsteroidI>).map(
                       (asteroid: AsteroidI) => {
                         if (numberOfAsteroidRendered >= 10) return null;
-                        asteroid.isFavorite = false;
                         numberOfAsteroidRendered++;
                         return (
                           <Grid key={asteroid.id} item>

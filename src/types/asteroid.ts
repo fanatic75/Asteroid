@@ -1,7 +1,6 @@
 export interface AsteroidI {
   id: number;
   name: string;
-  isFavorite:boolean,
   close_approach_data: [
     {
       close_approach_date: string;
